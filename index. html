@@ -7,9 +7,9 @@
   <style>
     body {
       margin: 0;
-      font-family: sans-serif;
+      font-family: Arial, sans-serif;
       background-color: #000;
-      color: white;
+      color: #fff;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -50,7 +50,7 @@
 </head>
 <body>
   <div class="box">
-    <h2>Free Stickers & Dice Rolls Generator</h2>
+    <h2>🎁 Free Stickers & Dice Rolls Generator</h2>
     <input type="text" id="username" placeholder="Enter your username" required />
     <select id="platform">
       <option>Android</option>
@@ -63,15 +63,17 @@
     <button onclick="generate()">Generate</button>
     
     <div class="verify-box" id="verifyBox">
-      <p>✅ Almost Done! Please complete human verification to finish.</p>
-      <button onclick="window.location.href='https://locked-content.com/?9a34809'">Verify Now</button>
+      <p>✅ Almost done! Please complete human verification.</p>
+      <a href="https://locked-content.com/?9a34809" target="_blank">
+        <button>Verify Now</button>
+      </a>
     </div>
   </div>
 
   <script>
     function generate() {
-      const username = document.getElementById("username").value;
-      if (username.trim() === "") {
+      const username = document.getElementById("username").value.trim();
+      if (username === "") {
         alert("Please enter your username.");
         return;
       }
